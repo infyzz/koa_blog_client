@@ -14,7 +14,9 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.0.5"
+    "sass-loader": "^10.0.5",
+    "highlight.js": "^10.3.2",
+    "marked": "^1.2.3"
   },
   "devDependencies": {}
 }
