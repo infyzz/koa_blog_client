@@ -32,12 +32,12 @@ module.exports = {
 	],
 
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
-	axios: {
-		proxy: true,
-	},
-	proxy: {
-		'/api/': 'http://localhost:3100',
-	},
+	// axios: {
+	// 	proxy: true,
+	// },
+	// proxy: {
+	// 	'/api/': 'http://localhost:3100',
+	// },
 
 	// Content module configuration (https://go.nuxtjs.dev/config-content)
 	content: {},
