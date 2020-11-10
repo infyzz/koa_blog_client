@@ -9,14 +9,11 @@ module.exports = {
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
 	},
-	env: {
-		baseUrl: process.env.NODE_ENV === 'production' ? 'http://aa0.cn' : 'http://localhost:3000'
-	},
 	css: ['~/assets/style.scss'],
 	// Global CSS (https://go.nuxtjs.dev/config-css)
 	srcDir: './',
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-	plugins: [],
+	plugins: [{ src: '~plugins/axios', ssr: true }],
 
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,
@@ -36,8 +33,7 @@ module.exports = {
 
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
 	axios: {
-		proxy: true,
-		baseUrl: '/'
+		proxy: true
 	},
 	// proxy: {
 	// 	'/api/': 'http://localhost:3100',
