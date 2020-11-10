@@ -5,9 +5,12 @@ module.exports = {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' },
+			{ hid: 'description', name: 'description', content: '' }
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+	},
+	env: {
+		baseUrl: process.env.NODE_ENV === 'production' ? 'http://aa0.cn' : 'http://localhost:3000'
 	},
 	css: ['~/assets/style.scss'],
 	// Global CSS (https://go.nuxtjs.dev/config-css)
@@ -28,13 +31,14 @@ module.exports = {
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		// https://go.nuxtjs.dev/pwa
-		'@nuxtjs/pwa',
+		'@nuxtjs/pwa'
 	],
 
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
-	// axios: {
-	// 	proxy: true,
-	// },
+	axios: {
+		proxy: true,
+		baseUrl: '/'
+	},
 	// proxy: {
 	// 	'/api/': 'http://localhost:3100',
 	// },
@@ -43,5 +47,5 @@ module.exports = {
 	content: {},
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
-	build: {},
+	build: {}
 };
